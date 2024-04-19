@@ -1,0 +1,18 @@
+[template]
+package main
+
+func main(){
+
+}
+
+
+[forrange]
+for _, indexC := range  {
+
+}
+
+
+[whiile]
+for  {
+
+}
