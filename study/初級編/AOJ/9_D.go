@@ -19,7 +19,7 @@ func main() {
 			fmt.Printf("%s\n", str[a:b+1])
 		case "reverse":
 			fmt.Scanf("%d %d\n", &a, &b)
-
+			str = str[:a] + reverseStr(str[a:b+1]) + str[b+1:]
 		case "replace":
 			fmt.Scanf("%d %d %s\n", &a, &b, &p)
 			str = str[:a] + p + str[b+1:]
@@ -29,8 +29,8 @@ func main() {
 
 func reverseStr(str string) string {
 	runes := []rune(str)
-	for i := 0; i < len(str); i++ {
-		runes[i], runes[len(str)-i] = runes[len(str)-i], runes[i]
+	for i := 0; i < len(str)/2; i++ {
+		runes[i], runes[len(str)-i-1] = runes[len(str)-i-1], runes[i]
 	}
 	return string(runes)
 }
