@@ -2,42 +2,23 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
-	var tmpString string = "ABCDE"
+	var String string = "ABCDEAEDCBA"
 	var S, T string
-	var Slen, Tlen int
+	var isSshort, isTshort bool
 
 	fmt.Scanf("%s\n", &S)
 	fmt.Scanf("%s\n", &T)
 
-	for i := 0; i < 5; i++ {
-		if tmpString[i] == S[0] {
-			Slen += i
-		}
-		if tmpString[i] == S[1] {
-			Slen -= i
-		}
-		if tmpString[i] == T[0] {
-			Tlen += i
-		}
-		if tmpString[i] == T[1] {
-			Tlen -= i
-		}
-	}
+	isSshort = strings.Contains(String, S)
+	isTshort = strings.Contains(String, T)
 
-	if abs(Slen) == abs(Tlen) {
-		fmt.Printf("Yes\n")
+	if isSshort == isTshort {
+		fmt.Printf("Yes")
 	} else {
-		fmt.Printf("No\n")
-	}
-}
-
-func abs(n int) int {
-	if n < 0 {
-		return n * -1
-	} else {
-		return n
+		fmt.Printf("No")
 	}
 }
