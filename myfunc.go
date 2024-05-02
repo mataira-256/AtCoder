@@ -1,3 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	fmt.Printf("%d\n", getDigit(123, 4))
+}
+
+func getDigit(num int, digit int) int {
+	return (num / int(math.Pow(10, float64(digit-1)))) % 10
+}
+
 func checkDigits(num int) int {
 	var digit int
 
