@@ -1,12 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
 func main() {
-	fmt.Printf("%d\n", getDigit(123, 4))
+
 }
 
 func getDigit(num int, digit int) int {
