@@ -21,12 +21,7 @@ func main() {
 
 	ans = N
 	for i := 0; i < N-K+1; i++ {
-		max = PIndex[i]
-		min = PIndex[i]
-		for j := 0; j < K; j++ {
-			max = max2(max, PIndex[i+j])
-			min = min2(min, PIndex[i+j])
-		}
+
 		ans = min2(ans, max-min)
 	}
 
