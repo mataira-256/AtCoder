@@ -21,10 +21,7 @@ func main() {
 	if T1index != -1 {
 		T2index := strings.Index(S[T1index+2:], string(T[1]))
 		if T2index != -1 {
-			if T[2] == 'X' { // Tの3文字目がXならこの時点でok
-				ans = true
-			}
-			if strings.Index(S[T2index+2:], string(T[2])) != -1 {
+			if T[2] == 'X' || strings.Index(S[T2index+2:], string(T[2])) != -1 {
 				ans = true
 			}
 		}
