@@ -13,10 +13,13 @@ func main() {
 
 	fmt.Scanf("%d\n", &N)
 
-	for i := 1; i <= checkDigits(N); i++ {
-		fmt.Print(getDigit(N, i))
+	ans = getDigit(N, checkDigits(N)) + 9*(checkDigits(N)-1)
+	for i := 1; i < checkDigits(N); i++ {
+		if getDigit(N, i) != 9 {
+			ans -= 1
+			break
+		}
 	}
-	fmt.Println()
 
 	fmt.Println(ans)
 }
