@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var (
@@ -11,5 +13,6 @@ func main() {
 
 	fmt.Scanf("%d %d %d\n", &A, &B, &C)
 
+	ans = A * B % mod * C % mod
 	fmt.Println(ans)
 }
