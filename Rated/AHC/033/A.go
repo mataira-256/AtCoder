@@ -4,6 +4,7 @@ import "fmt"
 
 var A [5][5]int
 var grid [5][5]int
+var crane [5][2]int
 var inIndex [5]int
 var ansString [5]string
 
@@ -12,19 +13,25 @@ func main() {
 		N int
 	)
 
-	for i := 0; i < 5; i++ {
-		for j := 0; j < 5; j++ {
-			grid[i][j] = -1
-		}
-	}
-
 	fmt.Scanf("%d\n", &N) // 結局全部5らしいね
-	for i := 0; i < 5; i++ {
+	for i := 0; i < N; i++ {
 		fmt.Scanf("%d %d %d %d %d\n", &A[i][0], &A[i][1], &A[i][2], &A[i][3], &A[i][4])
 	}
 
-	inbound()
-	showGrid()
+	for i := 0; i < N; i++ {
+		for j := 0; j < N; j++ {
+			grid[i][j] = -1
+		}
+		crane[i][1] = i
+	}
+
+	for i := 0; i < N; i++ {
+		ansString[i] = "PRRRRQLLLLPRRRRQLLLLPRRRRQLLLLPRRRRQLLLLPRRRRQ"
+	}
+
+	for i := 0; i < N; i++ {
+		fmt.Println(crane[i])
+	}
 
 	answer()
 }
