@@ -11,6 +11,7 @@ int main() {
     rep(i, N){
         string s;
         cin >> s;
+        rep(j, N)
     }
 
 
