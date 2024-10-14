@@ -1,0 +1,6 @@
+rep(i, N){
+    rep(j, N-1){
+        cout << grid.at(i).at(j) << ", ";
+    }
+    cout<< grid.at(i).at(N-1) << endl;
+}
