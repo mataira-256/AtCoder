@@ -1,17 +1,16 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/home/mataira/lib/ac-library-master",
-                "/home/mataira/lib/include"
+                "/opt/homebrew/include/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
+            "compilerPath": "/opt/homebrew/bin/g++",
             "cStandard": "c17",
             "cppStandard": "gnu++17",
-            "intelliSenseMode": "linux-gcc-x64"
+            "intelliSenseMode": "macos-gcc-arm64"
         }
     ],
     "version": 4

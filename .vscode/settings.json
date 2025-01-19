@@ -87,5 +87,17 @@
         "valarray": "cpp",
         "variant": "cpp",
         "dsu": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c17",
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    },
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**",
+        "/opt/homebrew/include/**",
+        "/usr/local/include/**",
+    ],
+    "cmake.configureOnOpen": false,
 }
